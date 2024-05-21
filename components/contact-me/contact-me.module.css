@@ -1,0 +1,17 @@
+.link{
+    color: var(--text-grey);
+    text-decoration: none;
+}
+  
+.link:hover{
+    color: var(--text-grey);
+    text-decoration: underline;
+}
+  
+.link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+  
