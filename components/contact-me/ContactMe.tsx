@@ -1,41 +1,22 @@
 "use client";
 import React, { useState } from "react";
-import Modal from "../Modal/Modal";
-import styles from "./ContactMe.module.css";
-import { link } from "fs";
+import styles from "./contact-me.module.css"
 
 export default function ContactMe() {
-    const [show, setShow] = useState(false);
-
-    const links = [
-        {
-            href: "https://github.com/CooperW824",
-            label: "GitHub",
-        },
-        {
-            href: "https://www.linkedin.com/in/cooperwerner/",
-            label: "LinkedIn",
-        },
-        {
-            href: "mailto:cooperwerner824@gmail.com",
-            label: "Email",
-        },
-    ];
-
-    let LinkList = links.map((link) => {
-        return (
-            <a className={styles.link} href= "link.href" key={link.label}>
-                {link.label}
-            </a>
-        );
-    });
     return (
-        <div>
-            <button onClick={() => setShow(true)}>ContactMe</button>
-            <Modal visable={show} onExit={() => setShow(false)}>
-                <h1>ContactMe</h1>
-                <div className={styles["link-list"]}>{LinkList}</div>
-            </Modal>
+        <div className={styles["contact-me-container"]} id="#contact">
+            <h1 className={styles["contact-me-title"]}>Contact Me</h1>
+            <h2 className={styles["contact-me-text"]}>
+                If you're interested in learinging about what I do, use the following links to check out my content
+            </h2>
+            <div className={styles["links-container"]}>
+                <a className={styles["link"]} href="http://www.youtube.com/@TheGameNovice">
+                    <img src="youtube.png" alt="Youtube" />
+                </a>
+                <a className={styles["link"]} href="https://www.reddit.com/user/TheGameNovice/">
+                    <img src="reddit.png" alt="Reddit" />
+                </a>
+            </div>
         </div>
     )
 }

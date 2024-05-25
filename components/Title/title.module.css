@@ -1,0 +1,56 @@
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+    background-color: var(--navy);
+    font-family: comic sans;
+    color: white;
+}
+
+.leftConatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.titleImg {
+    width: 300px;
+}
+
+.rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(white);
+}
+
+@keyframes floating {
+    0%{
+        transform: translate(0, 0);
+        text-shadow: 5px 5px var(red), 10px 10px var(red);
+    }
+    50%{
+        transform: translate(10px, 10px);
+        text-shadow: 10px 10px var(red), 20px, 20px var(red);
+    }
+
+    100%{
+        transform: translate(0, 0);
+        text-shadow: 5px 5px var(red), 10px 10px var(red);
+    }
+}
+
+.title {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-shadow: none;
+}
+
+.subTitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
